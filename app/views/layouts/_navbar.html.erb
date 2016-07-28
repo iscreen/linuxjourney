@@ -1,0 +1,23 @@
+<nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a id="logo" class="navbar-brand" href="/">Linux Journey</a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <%= image_tag "flags/United_States_of_America.png"%> Language <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+          <% @languages.each do |language| %>
+            <li>
+              <%= link_to image_tag("flags/#{language[:flag]}") + " #{language[:language]}", "/change_locale/#{language[:iso]}" %>
+            </li>
+          <% end %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
