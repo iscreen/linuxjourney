@@ -1,0 +1,552 @@
+/*===================================================================
+Main
+====================================================================*/
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #F7F7F7;
+  height: 100%;
+}
+
+h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-weight: light;
+  color: #999;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #2C3E50;
+}
+
+h4 {
+  color: white;
+  font-weight: bold;
+}
+
+h5 {
+  /* Footer */
+  font-weight: bold;
+  color: white;
+  font-size: 2em;
+}
+
+.donation {
+  color: #999;
+}
+
+pre {
+  line-height: .9em;
+}
+
+/* Fix list spacing in lessons */
+ul br, ol br {
+  display: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+.btn-info, .btn-info:visited, .btn-info:active {
+  background-color: #18BC9C;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #128F76;
+  border: none;
+}
+
+.btn-custom {
+  width: 100%;
+}
+
+.flash-message {
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.alert {
+  padding: 8px;
+  border-radius: 0;
+}
+
+/*===================================================================
+Helpers
+====================================================================*/
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.buffer-top {
+  padding: 25px;
+}
+
+.buffer-bottom {
+  padding: 25px;
+}
+
+/*===================================================================
+Navigation Bar
+====================================================================*/
+.navbar-custom {
+  background-color: #2C3E50;
+  color: white;
+  border-radius: 0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-custom
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+  background-color: #354b60;
+  color: white;
+}
+
+.navbar-custom
+.navbar-nav > .open > a,
+.navbar-nav > .open > a:hover,
+.navbar-nav > .open > a:focus {
+  color: white;
+  background-color: #2C3E50;
+}
+
+.navbar-custom .navbar-brand {
+  color: white;
+}
+
+/*===================================================================
+Home Page Content
+====================================================================*/
+.wrap {
+  min-height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto 300px;
+}
+
+.jumbotron {
+  height: 600px;
+  padding-top: 125px;
+  background-color: #18BC9C;
+  background-size: cover;
+  color: white;
+}
+
+.jumbotron h1 {
+  font-size: 48px;
+}
+
+.content {
+  padding-bottom: 50px;
+  /* this needs to be bigger than footer height*/
+}
+
+.sub-content {
+  padding-top: 75px;
+  padding-bottom: 10px;
+}
+
+.thumbnail {
+  border: none;
+  text-align: center;
+  background-color: white;
+  padding: 35px 10px 25px 10px;
+  height: 370px;
+  margin: 10px -5px;
+}
+
+.thumbnail-border {
+  box-shadow: 0 0 2px 1px #f1f1f1;
+}
+
+.inactive {
+  opacity: 0.50;
+  background: #E1E1E1;
+}
+
+.fade {
+  opacity: 1;
+}
+
+.fade:hover {
+  opacity: 0.90;
+  background: #18BC9C;
+  color: white;
+}
+
+/*===================================================================
+Footer
+====================================================================*/
+.footer {
+  margin-top: -200px;
+  /* negative value of footer height */
+  height: 200px;
+  background-color: #2C3E50;
+  color: #E6E7E8;
+}
+
+.icon-buffer {
+  padding: 25px 10px 0px 10px;
+}
+
+.footer p {
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  font-size: 1em;
+}
+
+/*===================================================================
+Forms
+====================================================================*/
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input {
+  height: 3em !important;
+  padding: 10px;
+}
+
+#error_explanation {
+  color: red;
+}
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
+}
+
+.field_with_errors .form-control {
+  color: #a94442;
+}
+
+.checkbox {
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+.checkbox span {
+  margin-left: 20px;
+  font-weight: normal;
+  position: relative;
+  top: 15px;
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+/*===================================================================
+App Page
+====================================================================*/
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.lesson {
+  padding: 20px;
+  background-color: #F1F2F3;
+  border-right: 2px solid #d1d1d1;
+  height: 100vh;
+  overflow: auto;
+}
+
+.lesson-content {
+  min-height: 100%;
+  padding: 20px 0px;
+}
+
+.lesson-text {
+  line-height: 1.2em;
+  font-size: 1.2em;
+}
+
+.hints {
+  height: 50px;
+}
+
+.practice {
+  padding: 20px;
+  height: 100vh;
+  background-color: #354551;
+}
+
+/* line 321, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+.exercise-content {
+  border-radius: 4px;
+  background-color: #F1F2F3;
+  height: 50%;
+  padding: 20px 20px 40px 20px;
+}
+
+.quiz-content {
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: #F1F2F3;
+  height: 48%;
+  padding: 20px 20px 40px 20px;
+  position: relative;
+}
+
+#check-answer {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.course-actions {
+  position: absolute;
+  bottom: 20px;
+}
+
+.correct-answer {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  padding: 10px;
+}
+
+/* line 354, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+.wrong-answer {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  padding: 10px;
+}
+
+/* line 361, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+.current {
+  color: #fff !important;
+  background-color: #18BC9C !important;
+}
+
+/* line 366, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+.user-app {
+  float: right;
+}
+
+/* line 370, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+#wrapper {
+  padding-left: 70px;
+  transition: all .4s ease 0s;
+  min-height: 100%;
+  background-color: gray;
+}
+
+#sidebar-wrapper {
+  margin-left: -250px;
+  left: 70px;
+  width: 250px;
+  background: #2C3E50;
+  position: fixed;
+  height: 100%;
+  z-index: 9000;
+  transition: all .4s ease 0s;
+  overflow-y: auto;
+}
+
+.sidebar-nav {
+  display: block;
+  float: left;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#page-content-wrapper {
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#wrapper.active {
+  padding-left: 250px;
+}
+
+#wrapper.active #sidebar-wrapper {
+  left: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+#sidebar_menu li a, .sidebar-nav li a {
+  color: #999;
+  display: block;
+  float: left;
+  text-decoration: none;
+  width: 250px;
+  background-color: #2C3E50;
+  -webkit-transition: background .5s;
+  -moz-transition: background .5s;
+  -o-transition: background .5s;
+  -ms-transition: background .5s;
+  transition: background .5s;
+}
+
+.sidebar_name {
+  padding-top: 25px;
+  color: #fff;
+  opacity: .7;
+}
+
+/* line 434, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}
+
+/* line 439, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+.sidebar-nav li a {
+  color: #999999;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 445, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+.sidebar-nav li a:hover {
+  color: #fff;
+  background-color: #18BC9C;
+  text-decoration: none;
+}
+
+/* line 451, /home/ubuntu/workspace/linux_journey/app/assets/stylesheets/custom.css.scss */
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+  background-color: #18BC9C;
+}
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+.main_icon {
+  float: right;
+  padding-right: 25px;
+  padding-top: 20px;
+}
+
+.sub_icon {
+  float: right;
+  padding-right: 65px;
+  padding-top: 10px;
+}
+
+@media (max-width: 767px) {
+  #wrapper {
+    padding-left: 70px;
+    transition: all .4s ease 0s;
+  }
+
+  #sidebar-wrapper {
+    left: 70px;
+  }
+
+  #wrapper.active {
+    padding-left: 250px;
+  }
+
+  #wrapper.active #sidebar-wrapper {
+    left: 250px;
+    width: 250px;
+    transition: all .4s ease 0s;
+  }
+}
+/*===================================================================
+Misc
+====================================================================*/
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*===================================================================
+Media Queries
+====================================================================*/
+@media (max-width: 767px) {
+  .jumbotron h1 {
+    font-size: 2em;
+  }
+
+  img {
+    max-width: 50%;
+  }
+
+  .dropdown li a {
+    background-color: #354b60;
+    color: white;
+  }
+}
+@media (max-width: 1080px) {
+  h5 {
+    font-size: 1.5em;
+  }
+
+  .content {
+    padding-bottom: 150px;
+    /* this needs to be bigger than footer height*/
+  }
+
+  .footer {
+    margin-top: -300px;
+    /* negative value of footer height */
+    height: 350px;
+    background-color: #2C3E50;
+    color: #E6E7E8;
+  }
+
+  .footer p {
+    font-size: 1em;
+  }
+
+  .wrap {
+    min-height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto 300px;
+  }
+}
